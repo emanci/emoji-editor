@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"> 
+    <title>emoji-editor</title>
+    <link rel="stylesheet" href="../lib/bootstrap-3.3.7-dist/js/bootstrap.min.js">
+    <link rel="stylesheet" href="../lib/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../dist/OwO.min.css">
+    <link rel="stylesheet" href="../dist/Editor.min.css">
+</head>
+<body>
+<br/><br/>
+<form class="form-inline" action="./server.php" method="POST">
+    <div class="col-sm-6">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <div class="row">
+                <div class="col-xs-6">
+                     <div class="OwO"></div>
+                  </div>
+            </div>
+        </div>
+        <div class="panel-body">
+            <textarea class="OwO-textarea" id="textareaCode" name="content"></textarea>
+        </div>
+    </div>
+    <div class="col-xs-6 text-right">
+        <button type="submit" class="btn btn-success" id="submitBTN">保存</button>
+        <button type="reset" class="btn btn-default">清空</button>
+    </div>
+    </div>
+</form>
+<script src="../dist/OwO.min.js"></script>
+<script>
+var OwO_demo = new OwO({
+    logo: '表情 :)',
+    container: document.getElementsByClassName('OwO')[0],
+    target: document.getElementsByClassName('OwO-textarea')[0],
+    api: './OwO.json',
+    position: 'down',
+    width: '560px',
+    maxHeight: '245px'
+});
+</script>
+</body>
+</html>
