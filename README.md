@@ -1,6 +1,10 @@
 ## emoji-editor
 Forked from https://github.com/DIYgod/OwO
 
+### Screenshot
+
+<img src="https://github.com/emanci/emoji-editor/blob/master/screenshot.png" width = "600" alt="emoji-editor" align=center />
+
 ### JS
 
 ```js
