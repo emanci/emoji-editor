@@ -2,14 +2,13 @@
     class OwO {
         constructor(option) {
             const defaultOption = {
-                logo: '表情',
+                logo: '表情 :)',
                 container: document.getElementsByClassName('OwO')[0],
                 target: document.getElementsByTagName('textarea')[0],
                 position: 'down',
-                width: '500px',
-                maxHeight: '300px',
-                api: 'http://localhost/study/OwO/demo/OwO.json'
-                //api: 'http://laravel.name/wxTest/OwO/demo/OwO.json'
+                width: '580px',
+                maxHeight: '240px',
+                api: 'http://localhost/OwO/demo/OwO.json'
             };
             for (let defaultKey in defaultOption) {
                 if (defaultOption.hasOwnProperty(defaultKey) && !option.hasOwnProperty(defaultKey)) {
@@ -47,18 +46,14 @@
             <div class="OwO-body" style="width: ${option.width}">`;
 
             for (let i = 0; i < this.packages.length; i++) {
-
                 html += `
                 <ul class="OwO-items OwO-items-${this.odata[this.packages[i]].type}" style="max-height: ${parseInt(option.maxHeight) - 53 + 'px'};">`;
 
                 let opackage = this.odata[this.packages[i]].container;
                 for (let i = 0; i < opackage.length; i++) {
-
                     html += `
                     <li class="OwO-item" title="${opackage[i].text}">${opackage[i].icon}</li>`;
-
                 }
-
                 html += `
                 </ul>`;
             }
@@ -73,8 +68,7 @@
             html += `
                     </ul>
                 </div>
-            </div>
-            `;
+            </div>`;
             this.container.innerHTML = html;
 
             // bind event

@@ -12,22 +12,22 @@
 <br/><br/>
 <form class="form-inline" action="./server.php" method="POST">
     <div class="col-sm-6">
-    <div class="panel panel-default">
-        <div class="panel-heading">
-            <div class="row">
-                <div class="col-xs-6">
-                     <div class="OwO"></div>
-                  </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <div class="row">
+                    <div class="col-xs-6">
+                         <div class="OwO"></div>
+                      </div>
+                </div>
+            </div>
+            <div class="panel-body">
+                <textarea class="OwO-textarea" name="content"></textarea>
             </div>
         </div>
-        <div class="panel-body">
-            <textarea class="OwO-textarea" id="textareaCode" name="content"></textarea>
+        <div class="col-xs-6 text-right">
+            <button type="submit" class="btn btn-success">保存</button>
+            <button type="reset" class="btn btn-default">清空</button>
         </div>
-    </div>
-    <div class="col-xs-6 text-right">
-        <button type="submit" class="btn btn-success" id="submitBTN">保存</button>
-        <button type="reset" class="btn btn-default">清空</button>
-    </div>
     </div>
 </form>
 <script src="../dist/OwO.min.js"></script>
@@ -36,10 +36,7 @@ var OwO_demo = new OwO({
     logo: '表情 :)',
     container: document.getElementsByClassName('OwO')[0],
     target: document.getElementsByClassName('OwO-textarea')[0],
-    api: './OwO.json',
-    position: 'down',
-    width: '560px',
-    maxHeight: '245px'
+    api: './OwO.json'
 });
 </script>
 </body>
